@@ -178,14 +178,20 @@ nav ul li a:hover {
   background-color: var(--color-secundario);
 }
 
+.imagen-contenedor {
+  display: flex;
+  justify-content: center;  /* Centra la imagen dentro del contenedor */
+  align-items: center;      /* Centra la imagen verticalmente */
+  width: 150px;             /* Ajusta el tamaño del contenedor */
+  height: 150px;            /* Debe ser igual al ancho para hacerla circular */
+  border-radius: 50%;       /* Forma circular */
+  overflow: hidden;         /* Asegura que la imagen se recorte si es necesario */
+  margin: 20px;
+}
 .imagen-presentacion {
-  display: block;
-  width: 200px; /* Ajusta el tamaño de la imagen */
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 100%;              /* La imagen se ajusta al contenedor */
+  height: 100%;             /* La imagen también llena el contenedor en altura */
+  object-fit: cover;        /* Ajusta la imagen sin distorsionarla */
 }
 
 .descripcion, .texto-cv {
