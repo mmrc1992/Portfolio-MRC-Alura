@@ -276,13 +276,13 @@ form button:hover {
   padding-left: 25px;
 }
 
-#acerca-de-mi-texto,
+
 #lista-pasatiempos,
 #lista-habilidades-blandas,
 #lista-experiencia,
 #lista-formaciones {
   margin-top: 20px;
-  line-height: 1.6;
+  line-height: 2;
   max-width: 100%;
   word-wrap: break-word;
   overflow: auto;
@@ -290,8 +290,19 @@ form button:hover {
   padding-left: 60px;
 }
 
+ #acerca-de-mi-texto {
+  line-height: 2;
+  max-width: 80%;
+  word-wrap: break-word;
+  padding-left: 40px;
+  overflow: visible;
+  height: auto;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
 #parrafo-experiencia {
-  line-height: 1.6;
+  line-height: 2;
   max-width: 100%;
   word-wrap: break-word;
   padding-left: 40px;
