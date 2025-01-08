@@ -303,7 +303,7 @@ form button:hover {
 
 #parrafo-experiencia {
   line-height: 2;
-  max-width: 100%;
+  max-width: 80%;
   word-wrap: break-word;
   padding-left: 40px;
   overflow: visible;
