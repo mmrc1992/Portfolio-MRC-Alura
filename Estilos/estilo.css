@@ -1,0 +1,434 @@
+/* Fuente importada de Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Definición de colores */
+:root {
+  --color-principal: #e99104;
+  --color-hover-principal: #e67e22;
+  --color-secundario: #333;
+  --color-menu-hamburguesa: #383838;
+  --color-fondo: #f4f4f4;
+  --color-enlace: #f39c12;
+  --color-hover-enlace: #a66804;
+  /* Naranja */
+  --color-footer: #333;
+  --color-blanco: whitesmoke;
+  --color-gris: #ccc;
+  /* Gris para bordes */
+  --color-gris-claro: #ededed;
+  /* Gris claro para secciones */
+  --color-span: #f7c080;
+  /* Color para porciones de texto */
+}
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  display: block;
+  overflow-y: auto;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo del cuerpo y tipografía */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-secundario);
+  line-height: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85)), url("../Imagenes/fondo.jpg");
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--color-blanco);
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  height: auto;
+}
+
+/* Estilo del menú */
+.contenido-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--color-secundario);
+}
+
+.contenido-header h1 {
+  color: var(--color-principal);
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--color-secundario);
+  position: relative;
+}
+/* Barra de navegación */
+#icono-nav {
+  display: none;
+  cursor: pointer;
+  position: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+#icono-cerrar {
+  display: none;
+  position: absolute;
+  top: 1px;
+  right: 45px;
+  font-size: 15px;
+  color: var(--color-enlace);
+  cursor: pointer;
+  z-index: 9999;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: var(--color-secundario);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+}
+
+/* Redes sociales */
+.redes-sociales {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.redes-sociales a {
+  color: var(--color-blanco);
+  font-size: 20px;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.redes-sociales a:hover {
+  color: var(--color-principal);
+}
+
+/* Presentación */
+.presentacion, .descarga-cv {
+  text-align: center;
+  padding: 20px;
+  color: var(--color-blanco);
+}
+
+.presentacion h2 span, .descarga-cv h2 {
+  color: var(--color-principal);
+  font-weight: bold;
+}
+
+.presentacion a, .descarga-cv a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.presentacion a:hover, .descarga-cv a:hover {
+  background-color: var(--color-secundario);
+}
+
+.imagen-presentacion {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* Asegura que sea de la misma altura y anchura */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contorno sin distorsionarse */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.descripcion, .texto-cv {
+  margin-top: 20px;
+}
+
+/* Formulario de contacto */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--color-gris);
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--color-hover-principal);
+}
+
+/* Estilo para los títulos y subtítulos */
+#titulo-acerca-de-mi,
+#titulo-habilidades,
+#titulo-formaciones,
+#titulo-experiencia,
+#titulo-contacto,
+#titulo-CV {
+  font-size: 2.5rem;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+#subtitulo-pasatiempos,
+#subtitulo-habilidades-blandas,
+#subtitulo-experiencia {
+  font-weight: italic bold;
+  margin-top: 60px;
+  color: var(--color-enlace);
+  padding-left: 25px;
+}
+
+#subtitulo-empresa {
+  margin-top: 40px;
+  padding-left: 30px;
+}
+
+#subtitulo-responsabilidades {
+  font-weight: bold;
+  font-style: oblique;
+  text-decoration: underline;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 40px;
+}
+
+/* Otros estilos de contenido */
+
+#presentacion-habilidades {
+  font-style: italic;
+  font-weight: normal;
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
+#acerca-de-mi-texto,
+#lista-pasatiempos,
+#lista-habilidades-blandas,
+#lista-experiencia,
+#lista-formaciones {
+  margin-top: 20px;
+  line-height: 1.6;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow: auto;
+  height: auto;
+  padding-left: 60px;
+}
+
+#parrafo-experiencia {
+  line-height: 1.6;
+  max-width: 100%;
+  word-wrap: break-word;
+  padding-left: 40px;
+  overflow: visible;
+  height: auto;
+  margin-top: 10px;
+}
+
+.span-experiencia {
+  font-weight: bold;
+  color: var(--color-span);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--color-footer);
+  color: var(--color-blanco);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-top: 2px;
+}
+
+/* Enlaces del footer */
+footer a {
+  color: var(--color-principal);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsividad */
+
+/* Estilo para menú en dispositivos móviles hasta 768px */
+@media (max-width: 768px) {
+  nav ul {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  #icono-nav {
+    display: block;
+  }
+
+  #icono-cerrar {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    border-top: 1px solid var(--color-hover-enlace);
+  }
+
+  nav ul li a:hover {
+    background-color: var(--color-hover-principal);
+  }
+
+  #titulo-acerca-de-mi,
+  #titulo-habilidades,
+  #titulo-formaciones,
+  #titulo-experiencia,
+  #titulo-contacto {
+    padding: 30px;
+  }
+
+  #subtitulo-pasatiempos,
+  #subtitulo-habilidades-blandas,
+  #subtitulo-experiencia {
+    padding: 50px;
+  }
+
+  #subtitulo-empresa,
+  #subtitulo-responsabilidades {
+    padding: 60px;
+  }
+
+  #acerca-de-mi-texto,
+  #lista-pasatiempos,
+  #lista-habilidades-blandas,
+  #parrafo-experiencia,
+  #lista-experiencia,
+  #lista-formaciones {
+    font-size: 0.95rem;
+    padding: 65px;
+    height: auto;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+  }
+
+  footer a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Para pantallas hasta */
+@media (max-width: 480px) {
+
+  #titulo-acerca-de-mi,
+  #titulo-habilidades,
+  #titulo-formaciones,
+  #titulo-experiencia,
+  #titulo-contacto {
+    padding: 10px;
+  }
+
+  #subtitulo-pasatiempos,
+  #subtitulo-habilidades-blandas,
+  #subtitulo-experiencia {
+    padding: 30px;
+  }
+
+  #subtitulo-empresa,
+  #subtitulo-responsabilidades {
+    padding: 40px;
+  }
+
+  #acerca-de-mi-texto,
+  #parrafo-experiencia,
+  #lista-pasatiempos,
+  #lista-habilidades-blandas,
+  #lista-experiencia,
+  #lista-formaciones {
+    font-size: 0.75rem;
+    padding: 45px;
+    height: auto;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  footer a {
+    font-size: 0.8rem;
+  }
+}
