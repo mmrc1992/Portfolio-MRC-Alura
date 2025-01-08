@@ -163,7 +163,7 @@ nav ul li a:hover {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: var(--color-principal);
+  background-color: var(--color-enlace);
   color: var(--color-blanco);
   text-decoration: none;
   text-align: center;
@@ -182,8 +182,8 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;  /* Centra la imagen dentro del contenedor */
   align-items: center;      /* Centra la imagen verticalmente */
-  width: 150px;             /* Ajusta el tamaño del contenedor */
-  height: 150px;            /* Debe ser igual al ancho para hacerla circular */
+  width: 300px;             /* Ajusta el tamaño del contenedor */
+  height: 300px;            /* Debe ser igual al ancho para hacerla circular */
   border-radius: 50%;       /* Forma circular */
   overflow: hidden;         /* Asegura que la imagen se recorte si es necesario */
   margin: 20px;
@@ -220,7 +220,7 @@ form textarea {
 
 form button {
   padding: 10px 20px;
-  background-color: var(--color-principal);
+  background-color: var(--color-enlace);
   color: var(--color-blanco);
   text-decoration: none;
   border-radius: 5px;
