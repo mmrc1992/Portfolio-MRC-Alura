@@ -33,8 +33,8 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  display: block;
+  min-height: 100%;
+  height: auto;
   overflow-y: auto;
   margin: 0;
   box-sizing: border-box;
@@ -42,9 +42,8 @@ body {
 
 /* Estilo del cuerpo y tipografía */
 body {
-  background-color: var(--color-fondo);
-  color: var(--color-secundario);
-  line-height: 1;
+  line-height: 1,5;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85)), url("../Imagenes/fondo.jpg");
   background-color: rgba(0, 0, 0, 0.8);
   background-size: cover;
@@ -57,6 +56,7 @@ main {
   flex: 1;
   overflow-y: auto;
   height: auto;
+  overflow: visible;
 }
 
 /* Estilo del menú */
@@ -83,7 +83,7 @@ main {
 #icono-nav {
   display: none;
   cursor: pointer;
-  position: flex;
+  position: sticky;
   justify-content: space-between;
   font-size: 20px;
 }
@@ -106,7 +106,9 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li a {
@@ -248,81 +250,86 @@ form button:hover {
 }
 
 /* Estilo para los títulos y subtítulos */
-#titulo-acerca-de-mi,
-#titulo-habilidades,
-#titulo-formaciones,
-#titulo-experiencia,
-#titulo-contacto,
-#titulo-CV {
+.titulo-acerca-de-mi,
+.titulo-habilidades,
+.titulo-formaciones,
+.titulo-experiencia,
+.titulo-contacto,
+.titulo-CV {
   font-size: 2.5rem;
   margin-top: 30px;
   padding-left: 20px;
+  width: 100%;
+  text-align: start;
 }
 
-#subtitulo-pasatiempos,
-#subtitulo-habilidades-blandas,
-#subtitulo-experiencia {
+.subtitulo-pasatiempos,
+.subtitulo-habilidades-blandas,
+.subtitulo-experiencia {
   font-weight: italic bold;
   margin-top: 60px;
   color: var(--color-enlace);
   padding-left: 25px;
+  width: 100%;
 }
 
-#subtitulo-empresa {
+.subtitulo-empresa {
   margin-top: 40px;
   padding-left: 30px;
+  width: 100%;
 }
 
-#subtitulo-responsabilidades {
+.subtitulo-responsabilidades {
   font-weight: bold;
   font-style: oblique;
   text-decoration: underline;
   margin-top: 30px;
   margin-bottom: 30px;
   padding-left: 40px;
+  width: 100%;
 }
 
-/* Otros estilos de contenido */
-
-#presentacion-habilidades {
+.presentacion-habilidades {
   font-style: italic;
   font-weight: normal;
   margin-top: 20px;
   padding-left: 25px;
+  width: 100%;
+  height: auto;
 }
 
-
-#lista-pasatiempos,
-#lista-habilidades-blandas,
-#lista-experiencia,
-#lista-formaciones {
-  margin-top: 20px;
-  line-height: 2;
-  max-width: 80%;
+/* Otros estilos de contenido */
+.lista-pasatiempos,
+.lista-habilidades-blandas,
+.lista-experiencia,
+.lista-formaciones {
+  margin-top: 30px;
+  line-height: 1.5;
+  width: 100%;
+  height: auto;
   word-wrap: break-word;
   overflow: auto;
-  height: auto;
   padding-left: 60px;
 }
 
-#acerca-de-mi-texto {
-  line-height: 2;
-  max-width: 80%;
+.acerca-de-mi-texto {
+  line-height: 1.5;
+  width: 100%;
+  height: auto;
   word-wrap: break-word;
   padding-left: 40px;
   overflow: visible;
-  height: auto;
   margin-top: 10px;
   font-size: 20px;
 }
 
-#parrafo-experiencia {
-  line-height: 2;
-  max-width: 80%;
+.parrafo-experiencia {
+  line-height: 1.5;
+  width: 100%;
+  height: auto;
   word-wrap: break-word;
   padding-left: 40px;
   overflow: visible;
-  height: auto;
   margin-top: 10px;
 }
 
@@ -358,6 +365,11 @@ footer a:hover {
 
 /* Estilo para menú en dispositivos móviles hasta 768px */
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow-y: scroll;
+  }
+
   nav ul {
     text-align: center;
     display: none;
@@ -390,77 +402,98 @@ footer a:hover {
     background-color: var(--color-hover-principal);
   }
 
-  #titulo-acerca-de-mi,
-  #titulo-habilidades,
-  #titulo-formaciones,
-  #titulo-experiencia,
-  #titulo-contacto {
-    padding: 30px;
+  .titulo-acerca-de-mi,
+  .titulo-habilidades,
+  .titulo-formaciones,
+  .titulo-experiencia,
+  .titulo-contacto,
+  .titulo-CV {
+    padding: 10px 20px;
+    /* Reduce padding horizontal */
+    max-width: 90%;
+    /* Limita el ancho máximo */
+    margin: auto;
+    /* Centra los títulos */
   }
 
-  #subtitulo-pasatiempos,
-  #subtitulo-habilidades-blandas,
-  #subtitulo-experiencia {
-    padding: 50px;
+  .subtitulo-pasatiempos,
+  .subtitulo-habilidades-blandas,
+  .subtitulo-experiencia,
+  .presentacion-habilidades {
+    padding: 8px 20px;
+    /* Reduce padding horizontal */
   }
 
-  #subtitulo-empresa,
-  #subtitulo-responsabilidades {
-    padding: 60px;
+  .subtitulo-empresa,
+  .subtitulo-responsabilidades {
+    padding: 8px 30px;
+    /* Reduce un poco más para evitar desbordamiento */
   }
 
-  #acerca-de-mi-texto,
-  #lista-pasatiempos,
-  #lista-habilidades-blandas,
-  #parrafo-experiencia,
-  #lista-experiencia,
-  #lista-formaciones {
-    font-size: 0.95rem;
-    padding: 65px;
-    height: auto;
+  .acerca-de-mi-texto,
+  .parrafo-experiencia,
+  .lista-pasatiempos,
+  .lista-habilidades-blandas,
+  .lista-experiencia,
+  .lista-formaciones {
+    font-size: 1rem;
+    /* Aumenta ligeramente para mejor legibilidad */
+    padding: 10px 20px;
+    /* Reduce espacio interno */
+    max-width: 800px;
+    /* Establece un ancho máximo */
+    margin: auto;
+    /* Centra el contenido */
   }
 
   footer {
-    padding: 15px;
-    font-size: 0.9rem;
+    padding: 1px;
+    font-size: 0.5rem;
     position: fixed;
     bottom: 0;
-    width: 100%
+    width: 100%;
   }
 
   footer a {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 }
 
-/* Para pantallas hasta */
+/* Para pantallas hasta 480px */
 @media (max-width: 480px) {
 
-  #titulo-acerca-de-mi,
-  #titulo-habilidades,
-  #titulo-formaciones,
-  #titulo-experiencia,
-  #titulo-contacto {
+  html,
+  body {
+    overflow-y: scroll;
+  }
+
+  .titulo-acerca-de-mi,
+  .titulo-habilidades,
+  .titulo-formaciones,
+  .titulo-experiencia,
+  .titulo-contacto,
+  .titulo-CV {
     padding: 10px;
   }
 
-  #subtitulo-pasatiempos,
-  #subtitulo-habilidades-blandas,
-  #subtitulo-experiencia {
-    padding: 30px;
+  .subtitulo-pasatiempos,
+  .subtitulo-habilidades-blandas,
+  .subtitulo-experiencia,
+  .presentacion-habilidades {
+    padding: 20px;
   }
 
-  #subtitulo-empresa,
-  #subtitulo-responsabilidades {
+  .subtitulo-empresa,
+  .subtitulo-responsabilidades {
     padding: 40px;
   }
 
-  #acerca-de-mi-texto,
-  #parrafo-experiencia,
-  #lista-pasatiempos,
-  #lista-habilidades-blandas,
-  #lista-experiencia,
-  #lista-formaciones {
+  .acerca-de-mi-texto,
+  .parrafo-experiencia,
+  .lista-pasatiempos,
+  .lista-habilidades-blandas,
+  .lista-experiencia,
+  .lista-formaciones {
     font-size: 0.75rem;
     padding: 45px;
     height: auto;
@@ -468,10 +501,10 @@ footer a:hover {
 
   footer {
     padding: 10px;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 
   footer a {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 }
