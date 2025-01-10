@@ -306,6 +306,17 @@ form button:hover {
   margin-right: 30px;
 }
 
+.acerca-de-mi-texto {
+  line-height: 1.5;
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  padding-left: 10px;
+  overflow: visible;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
 .parrafo-experiencia,
 .lista-habilidades-blandas,
 .lista-pasatiempos,
@@ -321,20 +332,15 @@ form button:hover {
   overflow: visible;
 }
 
+.item-lista{
+  margin: auto;
+  padding: 10px;
+}
+
+.span-formaciones,
 .span-experiencia {
   font-weight: bold;
   color: var(--color-span);
-}
-
-.acerca-de-mi-texto {
-  line-height: 1.5;
-  width: 100%;
-  height: auto;
-  word-wrap: break-word;
-  padding-left: 10px;
-  overflow: visible;
-  margin-top: 10px;
-  font-size: 20px;
 }
 
 /* Footer */
@@ -449,7 +455,6 @@ footer a:hover {
   }
 }
 
-
 /* Para pantallas hasta 768px */
 @media (max-width: 768px) {
 
@@ -518,7 +523,6 @@ footer a:hover {
   .lista-pasatiempos,
   .lista-experiencia,
   .lista-formaciones {
-    font-size: 0.75rem;
     padding: 45px;
     height: auto;
   }
