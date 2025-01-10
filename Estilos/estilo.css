@@ -263,6 +263,7 @@ form button:hover {
   text-align: start;
 }
 
+.formaciones-destacadas,
 .subtitulo-habilidades-blandas,
 .subtitulo-pasatiempos,
 .subtitulo-experiencia {
@@ -363,6 +364,7 @@ footer a:hover {
 /* Responsividad */
 /* Estilo para menú en dispositivos móviles hasta 1024px */
 @media (max-width: 1024px) {
+
   html,
   body {
     overflow-y: scroll;
@@ -409,6 +411,7 @@ footer a:hover {
     padding: 8px;
   }
 
+  .formaciones-destacadas,
   .subtitulo-habilidades-blandas,
   .subtitulo-pasatiempos,
   .subtitulo-experiencia,
@@ -496,6 +499,7 @@ footer a:hover {
     padding: 10px;
   }
 
+  .formaciones-destacadas,
   .subtitulo-habilidades-blandas,
   .subtitulo-pasatiempos,
   .subtitulo-experiencia,
