@@ -42,7 +42,7 @@ body {
 
 /* Estilo del cuerpo y tipografía */
 body {
-  line-height: 1,5;
+  line-height: 1, 5;
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85)), url("../Imagenes/fondo.jpg");
   background-color: rgba(0, 0, 0, 0.8);
@@ -83,8 +83,7 @@ main {
 #icono-nav {
   display: none;
   cursor: pointer;
-  position: sticky;
-  justify-content: space-between;
+  position: relative;
   font-size: 20px;
 }
 
@@ -140,18 +139,12 @@ nav ul li a:hover {
   color: var(--color-principal);
 }
 
-/* Presentación */
+/* Inicio */
 .presentacion {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 20px;
-  color: var(--color-blanco);
-}
-
-.descarga-cv {
   text-align: center;
   padding: 20px;
   color: var(--color-blanco);
@@ -249,6 +242,13 @@ form button:hover {
   background-color: var(--color-hover-principal);
 }
 
+/* Sección de descarga de CV */
+.descarga-cv {
+  text-align: center;
+  padding: 20px;
+  color: var(--color-blanco);
+}
+
 /* Estilo para los títulos y subtítulos */
 .titulo-acerca-de-mi,
 .titulo-habilidades,
@@ -257,25 +257,26 @@ form button:hover {
 .titulo-contacto,
 .titulo-CV {
   font-size: 2.5rem;
-  margin-top: 30px;
+  margin: 20px;
   padding-left: 20px;
   width: 100%;
   text-align: start;
 }
 
-.subtitulo-pasatiempos,
 .subtitulo-habilidades-blandas,
+.subtitulo-pasatiempos,
 .subtitulo-experiencia {
   font-weight: italic bold;
-  margin-top: 60px;
+  margin: 35px;
   color: var(--color-enlace);
-  padding-left: 25px;
+  padding-left: 15px;
   width: 100%;
 }
 
 .subtitulo-empresa {
-  margin-top: 40px;
-  padding-left: 30px;
+  margin: 35px;
+  padding-right: 35px;
+  padding-left: 35px;
   width: 100%;
 }
 
@@ -283,33 +284,45 @@ form button:hover {
   font-weight: bold;
   font-style: oblique;
   text-decoration: underline;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 40px;
+  margin: 45px;
+  padding-right: 45px;
+  padding-left: 45px;
   width: 100%;
 }
 
 .presentacion-habilidades {
   font-style: italic;
   font-weight: normal;
-  margin-top: 20px;
+  margin: 20px;
   padding-left: 25px;
   width: 100%;
   height: auto;
 }
 
 /* Otros estilos de contenido */
-.lista-pasatiempos,
+.acerca-de-mi-contenido,
+.contenido-experiencia {
+  margin-right: 30px;
+}
+
+.parrafo-experiencia,
 .lista-habilidades-blandas,
+.lista-pasatiempos,
 .lista-experiencia,
 .lista-formaciones {
-  margin-top: 30px;
   line-height: 1.5;
   width: 100%;
   height: auto;
   word-wrap: break-word;
-  overflow: auto;
-  padding-left: 60px;
+  margin: 45px;
+  padding-right: 45px;
+  padding-left: 45px;
+  overflow: visible;
+}
+
+.span-experiencia {
+  font-weight: bold;
+  color: var(--color-span);
 }
 
 .acerca-de-mi-texto {
@@ -317,25 +330,10 @@ form button:hover {
   width: 100%;
   height: auto;
   word-wrap: break-word;
-  padding-left: 40px;
+  padding-left: 10px;
   overflow: visible;
   margin-top: 10px;
   font-size: 20px;
-}
-
-.parrafo-experiencia {
-  line-height: 1.5;
-  width: 100%;
-  height: auto;
-  word-wrap: break-word;
-  padding-left: 40px;
-  overflow: visible;
-  margin-top: 10px;
-}
-
-.span-experiencia {
-  font-weight: bold;
-  color: var(--color-span);
 }
 
 /* Footer */
@@ -347,24 +345,24 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  margin-top: 2px;
+  margin-top: 20px;
+  font-size: 0.8rem;
 }
 
 /* Enlaces del footer */
 footer a {
   color: var(--color-principal);
   text-decoration: none;
+  font-size: 0.8rem;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-
 /* Responsividad */
-
-/* Estilo para menú en dispositivos móviles hasta 768px */
-@media (max-width: 768px) {
+/* Estilo para menú en dispositivos móviles hasta 1024px */
+@media (max-width: 1024px) {
   html,
   body {
     overflow-y: scroll;
@@ -408,63 +406,85 @@ footer a:hover {
   .titulo-experiencia,
   .titulo-contacto,
   .titulo-CV {
-    padding: 10px 20px;
-    /* Reduce padding horizontal */
-    max-width: 90%;
-    /* Limita el ancho máximo */
-    margin: auto;
-    /* Centra los títulos */
+    padding: 8px;
   }
 
-  .subtitulo-pasatiempos,
   .subtitulo-habilidades-blandas,
+  .subtitulo-pasatiempos,
   .subtitulo-experiencia,
   .presentacion-habilidades {
-    padding: 8px 20px;
-    /* Reduce padding horizontal */
+    padding: 16px;
   }
 
   .subtitulo-empresa,
   .subtitulo-responsabilidades {
-    padding: 8px 30px;
-    /* Reduce un poco más para evitar desbordamiento */
+    padding: 32px;
   }
 
   .acerca-de-mi-texto,
   .parrafo-experiencia,
-  .lista-pasatiempos,
   .lista-habilidades-blandas,
+  .lista-pasatiempos,
   .lista-experiencia,
   .lista-formaciones {
-    font-size: 1rem;
-    /* Aumenta ligeramente para mejor legibilidad */
-    padding: 10px 20px;
-    /* Reduce espacio interno */
-    max-width: 800px;
-    /* Establece un ancho máximo */
-    margin: auto;
-    /* Centra el contenido */
+    font-size: 0.85rem;
+    padding: 35px;
+    height: auto;
   }
 
   footer {
-    padding: 1px;
-    font-size: 0.5rem;
+    margin: auto;
+    padding: 7px;
+    font-size: 0.7rem;
     position: fixed;
     bottom: 0;
     width: 100%;
   }
 
   footer a {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 }
 
-/* Para pantallas hasta 480px */
-@media (max-width: 480px) {
+
+/* Para pantallas hasta 768px */
+@media (max-width: 768px) {
 
   html,
   body {
     overflow-y: scroll;
+  }
+
+  nav ul {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  #icono-nav {
+    display: block;
+  }
+
+  #icono-cerrar {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    border-top: 1px solid var(--color-hover-enlace);
+  }
+
+  nav ul li a:hover {
+    background-color: var(--color-hover-principal);
   }
 
   .titulo-acerca-de-mi,
@@ -476,8 +496,8 @@ footer a:hover {
     padding: 10px;
   }
 
-  .subtitulo-pasatiempos,
   .subtitulo-habilidades-blandas,
+  .subtitulo-pasatiempos,
   .subtitulo-experiencia,
   .presentacion-habilidades {
     padding: 20px;
@@ -490,8 +510,8 @@ footer a:hover {
 
   .acerca-de-mi-texto,
   .parrafo-experiencia,
-  .lista-pasatiempos,
   .lista-habilidades-blandas,
+  .lista-pasatiempos,
   .lista-experiencia,
   .lista-formaciones {
     font-size: 0.75rem;
@@ -500,11 +520,15 @@ footer a:hover {
   }
 
   footer {
-    padding: 10px;
-    font-size: 0.5rem;
+    margin: auto;
+    padding: 7px;
+    font-size: 0.7rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 
   footer a {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 }
