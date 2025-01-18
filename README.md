@@ -17,9 +17,6 @@ Este es un portafolio personal desarrollado como parte del Challenge de Alura La
 - JavaScript
 - Git y GitHub
 
-## 🔒 Licencia
-Este proyecto está bajo [Tipo de Licencia]. Consulta el archivo LICENSE para más detalles.
-
 ## 🙏 Agradecimientos
 - Alura Latam
 - Oracle Next Education
